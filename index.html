@@ -16,6 +16,9 @@
 		<meta property="og:image:height" content="256">
 		<meta property="og:image:alt" content="Idiot!">
         <style>
+    audio {
+      display: none; /* Hide the audio player */
+    }
             @keyframes img-1 {
                 0% {
                     opacity: 1;
@@ -81,7 +84,10 @@
             <img src="black.png">
             <img src="white.png">
         </div>
-        <audio id="IdiotAudio" loop><source src="idiotmp3.mp3" type="audio/mp3"></audio>
+        <audio autoplay loop>
+  <source src="idiotmp3.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
         <script>
             var audio = document.getElementById("IdiotAudio");
             audio.autoplay = true
